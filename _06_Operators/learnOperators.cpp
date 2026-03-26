@@ -77,6 +77,21 @@ int main()
     cout << " 4 | 5 -> " << (4|5) << endl;      // 4 = 100, 5 = 101; so 4 | 5 = 100 | 101 = 101 = 5 (result). 
     cout << " 1 | 4 -> " << (1|4) << endl;      // 1 = 001, 4 = 100; so 1 | 4 = 001 | 001 = 100 = 5 (result). 
     cout << " 1 | 5 -> " << (1|5) << endl;      // 1 = 001, 5 = 101; so 1 | 5 = 001 | 101 = 101 = 5 (result).  
+    cout << "Bitwise XOR" << endl; 
+    cout << " 0 ^ 0 -> " << (0^0) << endl;    
+    cout << " 0 ^ 1 -> " << (0^1) << endl;      
+    cout << " 1 ^ 0 -> " << (1^0) << endl;       
+    cout << " 1 ^ 1 -> " << (1^1) << endl; 
+    cout << "Left Shift" << endl;   // formula: value << n = value * (2 to the power n)
+    cout << "1 << 2 -> " << (1<<2) << endl;     // 1 = 0001, so left shift by 2 means it is '0100' so it is 4. 
+    cout << "Right shift" << endl;  // formula: value >> n = value / (2 to the power n)
+    cout << "1 >> 2 -> " << (1>>2) << endl;     // 1 = 0001, so right shift by 2 means it is '0000' so it is 0. 
+    cout << "One's complement" << endl; 
+    cout << "~(4) -> " << ~(4) << endl;
+    
+
+    // Assignment Operator 
+
 
     return 0; 
 }
