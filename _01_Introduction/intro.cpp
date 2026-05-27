@@ -1,9 +1,9 @@
-#include<iostream> 
-using namespace std; 
+#include <iostream>
+using namespace std;
 
 int main() 
 {
-    cout << "C++ programming" << endl; 
+    cout << "Namaste C++" << endl;
 
     return 0;
 }
