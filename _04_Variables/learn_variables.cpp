@@ -1,68 +1,34 @@
-#include<iostream> 
-
-/*
-     ---------- Global variable (scope demo) ----------
-     Global variables exist for the program lifetime and are accessible anywhere
-     after their point of definition. 
-*/
-int g_counter = 1; 
-
-using namespace std; 
-
-void printGlobal() 
-{
-    cout << "[print global] g_counter: " << g_counter << endl; 
-}
-
+#include<iostream>
+using namespace std;
 
 int main() 
 {
-    cout << "C++ Variables: Declaration, Initialization, Rules & Scope " << endl; 
-    
-    int num = 3; 
-    cout << "num (after init) = " << num << endl; 
+    char var1 = 'A';
+    cout << "var1: " << var1 << " size: " << sizeof(var1) << endl;
 
-    num = 7; 
-    cout << "num (after update) = " << num << endl; 
+    char16_t var2 = 'a';
+    cout << "var2: " << var2 << " size: " << sizeof(var2) << endl;      // printing ASCII value
 
+    char32_t var3 = 'b';
+    cout << "var3: " << var3 << " size: " << sizeof(var3) << endl;
 
-    int width; 
-    width = 25; 
-    cout << "width = " << width << endl; 
-
-    int height; 
-    height = 10; 
-    cout << "height = " << height << endl << endl; 
+    wchar_t var4 = 'd';
+    cout << "var4: " << var4 << " size: " << sizeof(var4) << endl;
 
 
+    float var5 = 3.5f;
+    cout << "var5: " << var5 << " size: " << sizeof(var5) << endl;
 
-    int x = 10, y = 20, z; 
-    z = x + y; 
-    cout << "x = " << x << endl << "y = " << y << endl << "z (x + y) = " << z << endl; 
+    double var6 = 3.56;
+    cout << "var6: " << var6 << " size: " << sizeof(var6) << endl;
 
+    long var7 = 876329230023;
+    cout << "var7: " << var7 << " size: " << sizeof(var7) << endl;
 
-    /* Initialization Styles */ 
-    
-    int a = 5;     // copy-initialization
-    int b(6);      // direct-initialization (parentheses)
-    int c{7};      // list-initialization (braces) 
-    cout << "Init styles -> " << "a = " << a << endl << "b = " << b << endl << "c = " << c << endl; 
+    long double var8 = 3.5L;
+    cout << "var8: " << var8 << " size: " << sizeof(var8) << endl;
 
+    bool var9 = true;
+    cout << "var9: " << var9 << " size: " << sizeof(var9) << endl;
 
-    /* ======== Local vs Global ======== */ 
-    int g_counter = 100;    // SHADOWS the global g_counter within main's scope 
-    cout << "[main] local g_counter = " << g_counter << " (shadows global)" << endl; 
-    printGlobal();  // still sees the true global '::g_counter' (value = 1)
-    ::g_counter = 2;    // access the global explicitly via scope resolution 
-    printGlobal(); 
-    cout << endl; 
-
-
-    /* ======== Using variables in expressions ======== */ 
-    int num1 = 10, num2; 
-    num2 = num1; 
-    cout << "num1 = " << num1 << endl << "num2 = " << num2 << endl; 
-
-
-    return 0; 
 }
